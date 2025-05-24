@@ -19,3 +19,11 @@ def get_base64_of_gif(file_path):
         data = f.read()
         encoded = base64.b64encode(data).decode()
         return f"data:image/gif;base64,{encoded}"
+    
+    # === Load Excel Data ===
+df = pd.read_excel("tesla 007 (1) new.xlsx", sheet_name="tesla", skiprows=1)
+df.columns = [
+    "วันที่", "ราคาเปิด", "ราคาสูงสุด", "ราคาต่ำสุด", "ราคาเฉลี่ย", "ราคาปิด",
+    "เปลี่ยนแปลง", "เปลี่ยนแปลง(%)", "ปริมาณ(พันหุ้น)", "มูลค่า(ล้านบาท)"
+]
+
