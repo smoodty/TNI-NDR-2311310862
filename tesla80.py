@@ -46,3 +46,10 @@ def convert_thai_date(thai_date_str):
 df = df[~df["วันที่"].isna() & ~df["วันที่"].astype(str).str.contains("วันที่")]
 df["วันที่"] = df["วันที่"].apply(convert_thai_date)
 df["วันที่"] = pd.to_datetime(df["วันที่"])
+
+# แปลงคอลัมน์ตัวเลข
+for col in df.columns[1:]:
+    df[col] = pd.to_numeric(df[col], errors='coerce')
+
+df = df.dropna()
+df_sorted = df.sort_values("วันที่", ascending=False)
