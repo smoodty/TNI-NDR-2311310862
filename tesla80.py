@@ -9,3 +9,7 @@ import base64
 
 st.set_page_config(page_title="Tesla Dashboard", layout="wide")
 
+# === โหลด CSS ภายนอก ===
+with open("custom_minimal_style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
