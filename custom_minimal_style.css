@@ -1,0 +1,51 @@
+body {
+    background-color: #f8eee6;
+    color: #4c392c;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(to bottom right, #f7f0e8, #f0e6dd);
+    border-right: 2px solid #e0d3c2;
+    padding: 1rem;
+}
+
+.block-container {
+    padding: 2rem;
+    background-color: #fffaf5;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(76, 57, 44, 0.1);
+}
+
+.stRadio > div {
+    background-color: #fff8f2;
+    border: 1px solid #e0d3c2;
+    border-radius: 8px;
+    padding: 0.8rem;
+}
+
+.stRadio label {
+    font-weight: bold;
+    color: #4c392c;
+}
+
+h2, h3 {
+    padding: 0.3em;
+    border-left: 6px solid #b3907f;
+    background-color: #fffaf5;
+    margin-bottom: 10px;
+    color: #4c392c;
+    transition: all 0.3s ease-in-out;
+}
+
+h2:hover, h3:hover {
+    transform: translateX(5px);
+    background-color: #f0e1d8;
+}
+
+.dataframe {
+    background-color: #fff8f2 !important;
+    color: #4c392c;
+    border: 1px solid #e0d3c2;
+    border-radius: 6px;
+}
