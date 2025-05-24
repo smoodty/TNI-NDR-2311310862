@@ -114,3 +114,18 @@ elif menu == "📊 สรุปข้อมูล":
 elif menu == "📑 ข้อมูลดิบ":
     st.markdown("## 📄 ข้อมูลดิบทั้งหมด")
     st.dataframe(df_sorted.reset_index(drop=True))
+
+    # === Animation Footer ===
+with st.container():
+    st.markdown("---")
+    placeholder = st.empty()
+    for i in range(100):
+        placeholder.markdown(
+            f"<div style='text-align:center; font-size:16px;'>📊 ระบบกำลังวิเคราะห์ข้อมูลรอบที่ {i+1}...</div>",
+            unsafe_allow_html=True
+        )
+        time.sleep(0.02)
+    placeholder.markdown(
+        "<div style='text-align:center; font-size:16px; color:green;'>✅ การวิเคราะห์เสร็จสมบูรณ์</div>",
+        unsafe_allow_html=True
+    )
