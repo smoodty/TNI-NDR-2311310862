@@ -65,3 +65,29 @@ with st.sidebar:
     st.markdown("#### เลือกเมนู 👇")
     menu = st.radio("", ("📈 แนวโน้มราคาปิด", "📊 สรุปข้อมูล", "📑 ข้อมูลดิบ"))
 
+# === Chart Page ===
+if menu == "📈 แนวโน้มราคาปิด":
+    gif_data_url = get_base64_of_gif("ponke-ponkesol.gif")
+
+    st.markdown(f"""
+    <h2 style="display: flex; align-items: center; gap: 10px;">
+    📉 แนวโน้มราคาปิดหุ้น Tesla (TSLA80)
+    <img src="{gif_data_url}" width="40" style="border-radius: 6px;">
+    </h2>
+    """, unsafe_allow_html=True)
+
+    X = df_6mo["วันที่"].map(pd.Timestamp.toordinal).values.reshape(-1, 1)
+    y = df_6mo["ราคาปิด"].values
+    model = LinearRegression()
+    model.fit(X, y)
+    trend = model.predict(X)
+
+    fig, ax = plt.subplots(figsize=(14, 6))
+    ax.plot(df_6mo["วันที่"], y, label="Actual Closing Price", color="#264653", linewidth=2)
+    ax.plot(df_6mo["วันที่"], trend, label="Trend (Linear Regression)", linestyle="--", color="#e76f51", linewidth=2)
+    ax.set_title("TSLA80 Closing Price Trend")
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Closing Price (Baht)")
+    ax.grid(True, alpha=0.3)
+    ax.legend()
+    st.pyplot(fig)
