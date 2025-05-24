@@ -58,3 +58,10 @@ df_sorted = df.sort_values("วันที่", ascending=False)
 last_date = df_sorted["วันที่"].max()
 six_months_ago = last_date - relativedelta(months=6)
 df_6mo = df_sorted[df_sorted["วันที่"] >= six_months_ago]
+
+# === Sidebar Menu ===
+with st.sidebar:
+    st.markdown("### 📌 Tesla 6-Month Dashboard")
+    st.markdown("#### เลือกเมนู 👇")
+    menu = st.radio("", ("📈 แนวโน้มราคาปิด", "📊 สรุปข้อมูล", "📑 ข้อมูลดิบ"))
+
