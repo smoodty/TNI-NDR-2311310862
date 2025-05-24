@@ -49,4 +49,5 @@ streamlit run tesla80.py
 รหัสนักศึกษา 2311310862
 
 วิชา: ENG-494	Extra Curriculum Activity in Engineering 4
+Python 3.11.9
 
