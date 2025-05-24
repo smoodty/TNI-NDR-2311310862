@@ -53,3 +53,8 @@ for col in df.columns[1:]:
 
 df = df.dropna()
 df_sorted = df.sort_values("วันที่", ascending=False)
+
+# === Filter เฉพาะข้อมูลย้อนหลัง 6 เดือนจากวันล่าสุด
+last_date = df_sorted["วันที่"].max()
+six_months_ago = last_date - relativedelta(months=6)
+df_6mo = df_sorted[df_sorted["วันที่"] >= six_months_ago]
