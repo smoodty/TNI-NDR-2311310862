@@ -109,3 +109,8 @@ elif menu == "📊 สรุปข้อมูล":
         st.write(df_6mo[["ราคาปิด", "SET Index"]].corr())
     else:
         st.write("ไม่พบข้อมูล SET Index ในตาราง")
+
+        # === Raw Data Page ===
+elif menu == "📑 ข้อมูลดิบ":
+    st.markdown("## 📄 ข้อมูลดิบทั้งหมด")
+    st.dataframe(df_sorted.reset_index(drop=True))
