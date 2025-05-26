@@ -39,7 +39,7 @@ CSS สำหรับปรับธีมให้ดูเป็นแนว 
 การแสดงผลใน Streamlit ต้องจัดลำดับ st.set_page_config ให้อยู่บนสุดเสมอ มิฉะนั้นจะ Error
 
 ลิ้งนำเสนอ: https://www.canva.com/design/DAGoWM3VoDo/dAA3psZ6md_HcuvefC9JjQ/edit?utm_content=DAGoWM3VoDo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-
+ลิ้งคลาว: https://tni-ndr-2311310862-azfvpmzhbw84a7uqhtcypv.streamlit.app/
 📦 วิธีการใช้งาน
 bash
 คัดลอก
