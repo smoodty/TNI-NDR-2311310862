@@ -49,3 +49,15 @@ h2:hover, h3:hover {
     border: 1px solid #e0d3c2;
     border-radius: 6px;
 }
+
+/* Force text color across markdown, widgets, and dataframe areas */
+html, body, .stApp, .css-1v3fvcr, .markdown-text-container, .stMarkdown, .css-ffhzg2, .css-1d391kg {
+    color: #4c392c !important;
+}
+
+/* Optional: Override input fields if needed */
+input, textarea, .stTextInput input {
+    color: #4c392c !important;
+    background-color: #fffaf5 !important;
+}
+
