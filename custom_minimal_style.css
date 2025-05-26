@@ -61,3 +61,27 @@ input, textarea, .stTextInput input {
     background-color: #fffaf5 !important;
 }
 
+/* ครอบคลุมสีข้อความภายใน Sidebar */
+section[data-testid="stSidebar"] * {
+    color: #4c392c !important;
+}
+
+/* ปรับสีป้าย (label), input, select, button ภายใน Sidebar */
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] input,
+section[data-testid="stSidebar"] select,
+section[data-testid="stSidebar"] textarea,
+section[data-testid="stSidebar"] button,
+section[data-testid="stSidebar"] .stRadio label,
+section[data-testid="stSidebar"] .stSelectbox label,
+section[data-testid="stSidebar"] .stTextInput input {
+    color: #4c392c !important;
+    background-color: #fff8f2 !important;
+}
+
+/* ปรับ placeholder input ใน Sidebar */
+section[data-testid="stSidebar"] ::placeholder {
+    color: #a38c7d !important;
+}
+
+
